@@ -29,7 +29,7 @@ const List = () => {
 
       {userInfo.map(({ name, school, level }) => (
         <li key={level}>
-          Username: {name} is in {level},{school}
+          Username: {name}, a level {level} in {school}
         </li>
       ))}
     </main>
