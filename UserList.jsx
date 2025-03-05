@@ -18,7 +18,16 @@ const UserList = () => {
       age: 22,
     },
   ];
-  return <div>UserList</div>;
+  return (
+    <>
+      {users.map(({ id, name, age }) => (
+        <div key={id}>
+          <li>Name: {name}</li>
+          <li>Age: {age}</li>
+        </div>
+      ))}
+    </>
+  );
 };
 
 export default UserList;
