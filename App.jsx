@@ -1,8 +1,8 @@
-import List from './List';
+import UserList from './UserList';
 function App() {
   return (
     <>
-      <List />
+      <UserList />
     </>
   );
 }
