@@ -1,8 +1,9 @@
 import Weather from './Weather';
 function App() {
+  const temperature = 15;
   return (
     <>
-      <Weather />
+      <Weather temperature={temperature} />
     </>
   );
 }
