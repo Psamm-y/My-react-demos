@@ -22,8 +22,8 @@ const ProductList = () => {
     <>
       {products.map(({ id, name, price }) => (
         <div>
-          <li>Product Name: {name}</li>
-          <li>Price: {price}</li>
+          <p>Product Name: {name}</p>
+          <p>Price: ${price}</p>
         </div>
       ))}
     </>

@@ -1,8 +1,8 @@
-import UserList from './List/UserList';
+import Weather from './Weather';
 function App() {
   return (
     <>
-      <UserList />
+      <Weather />
     </>
   );
 }
