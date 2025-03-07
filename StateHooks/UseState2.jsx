@@ -39,6 +39,7 @@ const UseState2 = () => {
     <section>
       <h3>Title: {movie.title}</h3>
       <p>Ratings: {movie.ratings}</p>
+      <button onClick={handeClick}>Change rating</button>
     </section>
   );
 };
