@@ -28,10 +28,14 @@
 
 // export default UseState2;
 
-import React from 'react';
+import React, { useState } from 'react';
 
 const UseState2 = () => {
-  return <section>UseState2</section>;
+  const [movie, setMpvie] = useState({
+    title: 'The Forge',
+    ratings: 9.9,
+  });
+  return <section></section>;
 };
 
 export default UseState2;
