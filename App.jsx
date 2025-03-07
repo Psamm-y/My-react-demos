@@ -1,9 +1,6 @@
 import Weather from './Weather';
 import UserStatus from './UserStatus';
 import { TfiAlarmClock } from 'react-icons/tfi';
-
-function Click() {}
-
 function App(props) {
   const temperature = 35;
 
@@ -17,7 +14,6 @@ function App(props) {
     <>
       <UserStatus loggedIn={true} isAdmin={true} />
       <TfiAlarmClock style={styles} />
-      <Click />
     </>
   );
 }
