@@ -35,7 +35,12 @@ const UseState2 = () => {
     title: 'The Forge',
     ratings: 9.9,
   });
-  return <section></section>;
+  return (
+    <section>
+      <h3>Title: {movie.title}</h3>
+      <p>Ratings: {movie.ratings}</p>
+    </section>
+  );
 };
 
 export default UseState2;
