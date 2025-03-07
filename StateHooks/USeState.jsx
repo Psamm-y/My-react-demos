@@ -13,10 +13,10 @@ const USeState = () => {
     <div>
       <h1 style={styles}> {count}</h1>
       <button style={styles} onClick={increment}>
-        +
+        <b>+</b>
       </button>
       <button style={styles} onClick={decrement}>
-        -
+        <b>-</b>
       </button>
     </div>
   );
