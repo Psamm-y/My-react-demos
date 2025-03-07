@@ -3,8 +3,11 @@ import UserStatus from './UserStatus';
 import { TfiAlarmClock } from 'react-icons/tfi';
 
 const Move = () => {
+  const handleMove = () => {
+    alert('Mouse moved over this text');
+  };
   return (
-    <p onCopy={handleCopy}>
+    <p onMouseMove={handleMove}>
       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum tempore
       totam ullam repellat rem autem aliquam, quo corporis! Blanditiis at
       quisquam unde dolor vel et! Et dolores optio necessitatibus delectus.
@@ -23,8 +26,7 @@ function App(props) {
   };
   return (
     <>
-      <UserStatus loggedIn={true} isAdmin={true} />
-      <TfiAlarmClock style={styles} />
+      <Move />
     </>
   );
 }
