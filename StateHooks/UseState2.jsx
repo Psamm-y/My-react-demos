@@ -31,10 +31,12 @@
 import React, { useState } from 'react';
 
 const UseState2 = () => {
-  const [movie, setMpvie] = useState({
+  const [movie, setMovie] = useState({
     title: 'The Forge',
     ratings: 9.9,
   });
+
+  const handeClick = () => setMovie({ ...movie, ratings: 10 });
   return (
     <section>
       <h3>Title: {movie.title}</h3>
