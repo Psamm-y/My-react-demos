@@ -1,10 +1,10 @@
 import React from 'react';
-import USeState from './StateHooks/USeState';
+import UseState2 from './StateHooks/UseState2';
 
 const App2 = () => {
   return (
     <>
-      <USeState />
+      <UseState2 />
     </>
   );
 };
