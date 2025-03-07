@@ -53,6 +53,14 @@ const UseState2 = () => {
     { id: 1, title: 'Raskuku and the dragon Chicken', rating: 6.3 },
     { id: 2, title: 'Kyeiwaa vs. Ninja', rating: 7 },
   ]);
+
+  const handleMovieChange = () => {
+    setMovies(
+      movies.map((m) =>
+        m.id === 1 ? { ...m, title: 'Amina and the nasty beef' } : m
+      )
+    );
+  };
   return (
     <section>
       {movies.map(({ id, title, rating }) => (
@@ -61,7 +69,7 @@ const UseState2 = () => {
           <p>Ratings:{rating} </p>
         </li>
       ))}
-      <button>Change Movie</button>
+      <button onClick={handleMovieChange}>Change Movie</button>
     </section>
   );
 };
