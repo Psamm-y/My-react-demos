@@ -28,7 +28,7 @@
 
 // export default UseState2;
 
-// import React, { useState } from 'react';
+import React, { useState } from 'react';
 
 // const UseState2 = () => {
 //   const [movie, setMovie] = useState({
@@ -48,10 +48,22 @@
 
 // export default UseState2;
 
-import React from 'react';
-
 const UseState2 = () => {
-  return <section>UseState2</section>;
+  const [movies, setMovies] = useState([
+    { id: 1, title: 'Raskuku and the dragon Chicken', rating: 6.3 },
+    { id: 2, title: 'Kyeiwaa vs. Ninja', rating: 7 },
+  ]);
+  return (
+    <section>
+      {movies.map(({ id, title, rating }) => (
+        <li key={id}>
+          <h1>Title: {title}</h1>
+          <p>Ratings:{rating} </p>
+        </li>
+      ))}
+      <button>Change Movie</button>
+    </section>
+  );
 };
 
 export default UseState2;
