@@ -1,10 +1,10 @@
 import React from 'react';
-import UseState2 from './StateHooks/UseState2';
+import Todo from './StateHooks/Todo';
 
 const App2 = () => {
   return (
     <>
-      <UseState2 />
+      <Todo />
     </>
   );
 };
