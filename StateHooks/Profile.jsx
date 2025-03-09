@@ -1,7 +1,14 @@
 import React from 'react';
 
 const Profile = () => {
-  return <div>Profile</div>;
+  const [user, setUser] = useState({ name: '', age: 5 });
+
+  return (
+    <div>
+      <h2>User Profile</h2>
+      <form onSubmit={handleSubmit}></form>
+    </div>
+  );
 };
 
 export default Profile;
