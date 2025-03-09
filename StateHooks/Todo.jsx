@@ -16,7 +16,7 @@ const Todo = () => {
   return (
     <section>
       <h1>Todo list</h1>
-      <form onSubmit={handleSubmit} style={{ display: 'inline' }}>
+      <form onSubmit={handleSubmit}>
         <input
           type="text"
           value={inputValue}
