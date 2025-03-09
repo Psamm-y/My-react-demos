@@ -28,10 +28,10 @@ const Todo = () => {
           placeholder="Enter Task..."
         />
       </form>
-      <button onClick={handleAdd}>Add todo</button>
+      <button>Add todo</button>
       <ul>
-        {tasks.map(([t], index) => (
-          <li>{t}</li>
+        {tasks.map((t, index) => (
+          <li key={index}>{t}</li>
         ))}
       </ul>
     </section>
