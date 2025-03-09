@@ -9,6 +9,7 @@ const CopyInput = () => {
       setCopied(true);
       setTimeout(setCopied(false, 2000));
     });
+    setInputValue('');
   };
   return (
     <section>
