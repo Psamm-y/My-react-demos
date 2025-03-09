@@ -1,14 +1,15 @@
 import React from 'react';
-
+import { createPortal } from 'react-dom';
 const PopupContent = ({ copied }) => {
-  return (
+  return createPortal(
     <section>
       {copied && (
         <div style={{ position: 'absolute', bottom: '3rem' }}>
           Content copied
         </div>
       )}
-    </section>
+    </section>,
+    document.querySelector('#popup-content')
   );
 };
 
