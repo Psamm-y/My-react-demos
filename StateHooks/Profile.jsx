@@ -11,25 +11,37 @@ const Profile = () => {
   const handleAgeChange = (e) => {
     setAgeInput(e.target.input);
   };
+  const handleSubmit = () => {
+    setUser(({ name, age }) => {
+      name = nameInput;
+      age = ageInput;
+    });
+    setNameInput('');
+    setAgeInput('');
+  };
   return (
     <div>
       <h2>User Profile</h2>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="name"></label>
+        <label htmlFor="name">Name: </label>
         <input
           onChange={handleNameChange}
           id="name"
           type="text"
           value={nameInput}
-        />
-        <label htmlFor="age"></label>
+        />{' '}
+        <br />
+        <label htmlFor="age">Age: </label>
         <input
           onChange={handleAgeChange}
           id="age"
           type="text"
           value={ageInput}
         />
+        <button>Add</button>
       </form>
+      <p>Name: {user.name}</p>
+      <p>Age: {user.age}</p>
     </div>
   );
 };
