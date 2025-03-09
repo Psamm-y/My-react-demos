@@ -1,6 +1,6 @@
 import React from 'react';
 
-const PopupContent = () => {
+const PopupContent = ({ copied }) => {
   return <div>PopupContent</div>;
 };
 

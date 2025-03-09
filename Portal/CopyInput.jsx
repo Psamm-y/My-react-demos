@@ -23,7 +23,7 @@ const CopyInput = () => {
     </section>
   );
 
-  <PopupContent />;
+  <PopupContent copied={copied} />;
 };
 
 export default CopyInput;
