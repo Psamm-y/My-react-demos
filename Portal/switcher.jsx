@@ -1,7 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Switcher = () => {
-  return <div>Switcher</div>;
+  const [sw, setSw] = useState(false);
+  return (
+    <div>
+      <input type="text" key={sw ? 'dark' : 'light'} />
+      <button>Switch</button>
+    </div>
+  );
 };
 
 export default Switcher;
