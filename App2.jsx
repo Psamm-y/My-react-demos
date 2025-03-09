@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import Profile from './StateHooks/Profile';
+import ShoppingList from './StateHooks/ShoppingList';
+
 const App2 = () => {
-  const [user, setUser] = useState({ name: '', age: 5 });
   return (
     <>
-      <Profile />
+      <ShoppingList />
     </>
   );
 };
