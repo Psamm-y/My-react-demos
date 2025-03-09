@@ -2,25 +2,38 @@ import React, { useState } from 'react';
 
 const Todo = () => {
   const [tasks, setTasks] = useState(['Do laundry']);
-  const [inputValue,setInputValue]= useState("")
+  const [inputValue, setInputValue] = useState('');
   const handleAdd = (event) => {
-    setTasks(event.target.value)
-    setInputValue("");
+    const todo = event.target.value;
+    setTasks(...tasks, todo);
+    setInputValue('');
+  };
+  const handleChange = (e) => setInputValue(e.target.value);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (inputValue.trim) {
+      setTasks(...tasks, inputValue);
+      setInputValue('');
+    }
   };
   return (
     <section>
       <h1>Todo list</h1>
-      <form onSubmit={ }>
-              <input type="text" value={tasks} placeholder='Add todo'/>
-
+      <form onSubmit={handleSubmit} style={{ display: 'inline' }}>
+        <input
+          type="text"
+          value={inputValue}
+          onChange={handleChange}
+          placeholder="Enter Task..."
+        />
       </form>
       <button onClick={handleAdd}>Add todo</button>
       <ul>
-          {tasks.map((t,index) => (
-        <li key={index}>{t}</li>
-      ))}
+        {tasks.map(([t], index) => (
+          <li>{t}</li>
+        ))}
       </ul>
-    
     </section>
   );
 };
