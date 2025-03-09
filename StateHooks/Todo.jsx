@@ -3,17 +3,13 @@ import React, { useState } from 'react';
 const Todo = () => {
   const [tasks, setTasks] = useState(['Do laundry']);
   const [inputValue, setInputValue] = useState('');
-  const handleAdd = (event) => {
-    const todo = event.target.value;
-    setTasks(...tasks, todo);
-    setInputValue('');
-  };
+
   const handleChange = (e) => setInputValue(e.target.value);
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (inputValue.trim) {
-      setTasks(...tasks, inputValue);
+    if (inputValue.trim()) {
+      setTasks([...tasks, inputValue]);
       setInputValue('');
     }
   };
@@ -27,8 +23,8 @@ const Todo = () => {
           onChange={handleChange}
           placeholder="Enter Task..."
         />
+        <button>Add todo</button>
       </form>
-      <button>Add todo</button>
       <ul>
         {tasks.map((t, index) => (
           <li key={index}>{t}</li>
