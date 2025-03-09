@@ -7,7 +7,7 @@ const CopyInput = () => {
   const handleCopy = () => {
     navigator.clipboard.writeText(inputValue).then(() => {
       setCopied(true);
-      setTimeout(setCopied(false, 2000));
+      setTimeout(setCopied(false, 2000)); //sets the copied state variable back to false after 2 second i.e. 2000 milliseconds
     });
     setInputValue('');
   };
