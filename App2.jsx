@@ -1,9 +1,9 @@
 import React from 'react';
-import Todo2 from './StateHooks/Todo2';
+import Profile from './StateHooks/Profile';
 const App2 = () => {
   return (
     <>
-      <Todo2 />
+      <Profile />
     </>
   );
 };
