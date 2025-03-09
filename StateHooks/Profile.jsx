@@ -9,9 +9,9 @@ const Profile = () => {
       <h2>User Profile</h2>
       <form onSubmit={handleSubmit}>
         <label htmlFor="name"></label>
-        <input id="name" type="text" />
+        <input id="name" type="text" value={nameInput} />
         <label htmlFor="age"></label>
-        <input id="age" type="text" value={input} />
+        <input id="age" type="text" value={ageInput} />
       </form>
     </div>
   );
