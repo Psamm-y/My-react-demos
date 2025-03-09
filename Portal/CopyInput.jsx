@@ -2,9 +2,13 @@ import React, { useState } from 'react';
 
 const CopyInput = () => {
   const [inputValue, setInputValue] = useState('');
-  const [copied, setCopied] = useState('');
+  const [copied, setCopied] = useState(false);
 
-  const handleCopy = () => {};
+  const handleCopy = () => {
+    navigator.clipboard.writeText(inputValue).then(() => {
+      setCopied(true);
+    });
+  };
   return (
     <section>
       <input
@@ -12,6 +16,7 @@ const CopyInput = () => {
         value={inputValue}
         onChange={(e) => setInputValue(e.target.value)}
       />
+      <button onClick={handleCopy}>Copy</button>
     </section>
   );
 };
