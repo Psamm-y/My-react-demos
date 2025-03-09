@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import PopupContent from './PopupContent';
 const CopyInput = () => {
   const [inputValue, setInputValue] = useState('');
   const [copied, setCopied] = useState(false);
@@ -22,6 +22,8 @@ const CopyInput = () => {
       <button onClick={handleCopy}>Copy</button>
     </section>
   );
+
+  <PopupContent />;
 };
 
 export default CopyInput;
