@@ -6,7 +6,7 @@ const CopyInput = () => {
 
   const handleCopy = () => {
     navigator.clipboard.writeText(inputValue).then(() => {
-      //the function in the .then() will execute after the value has been copied successfully
+      //everything in the .then() function will execute after the value has been copied successfully
       setCopied(true);
       setTimeout(() => {
         setCopied(false);
