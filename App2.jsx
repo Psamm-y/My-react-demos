@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
-import CopyInput from './Portal/CopyInput';
-import PopupContent from './Portal/PopupContent';
+import Switcher from './Portal/switcher';
 const App2 = () => {
   return (
     <>
-      <CopyInput />
-      <PopupContent />
+      <Switcher />
     </>
   );
 };
