@@ -12,7 +12,9 @@ const Todo2 = () => {
       setInput('');
     }
   };
-
+  const removeTask = (index) => {
+    setTodos((todo) => todo.filter((_, i) => i !== index));
+  };
   const handleChange = (e) => {
     setInput(e.target.value);
   };
@@ -30,7 +32,9 @@ const Todo2 = () => {
       </form>
 
       {todos.map((todo, index) => (
-        <li key={index}>{todo}</li>
+        <li onClick={() => removeTask(index)} key={index}>
+          {todo}
+        </li>
       ))}
     </section>
   );
