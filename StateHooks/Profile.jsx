@@ -7,17 +7,22 @@ const Profile = () => {
 
   const handleNameChange = (e) => {
     setNameInput(e.target.value);
+    setUser((prev) => ({ ...prev, name: nameInput }));
   };
   const handleAgeChange = (e) => {
-    setAgeInput(e.target.input);
+    setAgeInput(e.target.value);
+    setUser((prev) => ({ ...prev, age: e.target.value }));
   };
-  const handleSubmit = () => {
-    setUser(({ name, age }) => {
-      name = nameInput;
-      age = ageInput;
-    });
-    setNameInput('');
-    setAgeInput('');
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (nameInput.trim() && ageInput > 0) {
+      setUser({
+        name: nameInput,
+        age: ageInput,
+      });
+      setNameInput('');
+      setAgeInput('');
+    }
   };
   return (
     <div>
@@ -35,13 +40,16 @@ const Profile = () => {
         <input
           onChange={handleAgeChange}
           id="age"
-          type="text"
+          type="number"
           value={ageInput}
         />
-        <button>Add</button>
+        <button type="submit">Add</button>
       </form>
-      <p>Name: {user.name}</p>
-      <p>Age: {user.age}</p>
+      <div>
+        <h2>User info:</h2>
+        <p>Name: {user.name}</p>
+        <p>Age: {user.age}</p>
+      </div>
     </div>
   );
 };
