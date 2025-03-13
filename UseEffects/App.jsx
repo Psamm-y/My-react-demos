@@ -13,7 +13,15 @@ const App = () => {
     }
     getData();
   });
-  return <div></div>;
+  return (
+    <div>
+      <ul>
+        {data.map((todo) => (
+          <li>{todo.title}</li>
+        ))}
+      </ul>
+    </div>
+  );
 };
 
 export default App;
