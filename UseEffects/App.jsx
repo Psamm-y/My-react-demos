@@ -17,8 +17,9 @@ const App = () => {
     <div>
       <ul>
         {data.map((todo) => (
-          <section>
-            <li key={todo.id}>{todo.title}</li>
+          <section key={todo.id}>
+            <li style={{ color: 'purple' }}>{todo.title}</li>
+            <p>{todo.body}</p>
           </section>
         ))}
       </ul>
