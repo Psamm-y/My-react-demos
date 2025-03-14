@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import CounterEffect from './UseEffects/COunterEffect';
+import FetchDataEffect from './UseEffects/FetchDataEffect';
 const App2 = () => {
   const [count, setCount] = useState(0);
   return (
     <>
-      <CounterEffect />
+      <FetchDataEffect />
     </>
   );
 };
