@@ -1,10 +1,20 @@
 //UseEffect with Dependencies
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 const CounterEffect = () => {
   const [count, setCount] = useState(0);
 
-  return <div>CounterEffect</div>;
+  useEffect(() => {
+    document.title = `Increment ${count}`;
+  });
+  return (
+    <div>
+      <p style={{ fontSize: '2rem' }}>
+        <b>{count}</b>
+      </p>
+      <button onClick={() => setCount(count + 1)}>Increment</button>
+    </div>
+  );
 };
 
 export default CounterEffect;
