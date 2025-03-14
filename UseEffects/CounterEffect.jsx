@@ -6,7 +6,7 @@ const CounterEffect = () => {
 
   useEffect(() => {
     document.title = `Increment ${count}`;
-  });
+  }, [count]);
   return (
     <div>
       <p style={{ fontSize: '2rem' }}>
