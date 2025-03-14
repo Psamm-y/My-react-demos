@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import BasicEffect from './UseEffects/BasicEffect';
+import CounterEffect from './UseEffects/COunterEffect';
 const App2 = () => {
   return (
     <>
-      <BasicEffect />
+      <CounterEffect />
     </>
   );
 };
