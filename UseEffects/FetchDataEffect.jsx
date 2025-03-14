@@ -16,9 +16,11 @@ const FetchDataEffect = () => {
   }, []);
   return (
     <div>
-      {data.map((post) => (
-        <li key={post.id}>{post.title && post.id == 1}</li>
-      ))}
+      {data
+        .filter((post) => post.id == 1)
+        .map((post) => (
+          <li key={post.id}>{post.title}</li>
+        ))}
     </div>
   );
 };
