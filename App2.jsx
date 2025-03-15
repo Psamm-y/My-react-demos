@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
-import FetchDataEffect from './UseEffects/FetchDataEffect';
+import { createContext } from 'react';
+
 const App2 = () => {
-  const [count, setCount] = useState(0);
-  return (
-    <>
-      <FetchDataEffect />
-    </>
-  );
+  const name = 'John';
+
+  return <></>;
 };
 
 export default App2;
