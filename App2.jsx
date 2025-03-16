@@ -1,14 +1,14 @@
-import React, { useState, createContext } from 'react';
-import { UserContext, UserProvider } from './UseContext/UserContext';
-import UserProfile from './UseContext/UserProfile';
+// import React, { useState, createContext } from 'react';
+// import { UserContext, UserProvider } from './UseContext/UserContext';
+// import UserProfile from './UseContext/UserProfile';
+import App from './UseReducer/App';
 const App2 = () => {
-  const name = 'John';
-  const age = 20;
   return (
     <>
-      <UserProvider>
+      {/* <UserProvider>
         <UserProfile />
-      </UserProvider>
+      </UserProvider> */}
+      <App />
     </>
   );
 };
