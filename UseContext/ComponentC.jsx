@@ -1,7 +1,15 @@
 import React from 'react';
-
-const ComponentC = ({ name }) => {
-  return <div>{name} is him</div>;
+import { User } from './ComponentA';
+const ComponentC = () => {
+  return (
+    <div>
+      <User.Consumer>
+        {(name) => {
+          return <h1>{name}</h1>;
+        }}
+      </User.Consumer>
+    </div>
+  );
 };
 
 export default ComponentC;
