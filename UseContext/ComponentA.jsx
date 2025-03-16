@@ -9,7 +9,7 @@ const ComponentA = () => {
   return (
     <>
       <User.Provider value={name}>
-        <ComponentA />
+        <ComponentB />
       </User.Provider>
     </>
   );
