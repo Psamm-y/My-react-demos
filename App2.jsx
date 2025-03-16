@@ -1,16 +1,14 @@
-import React, { useState } from 'react';
-import { createContext } from 'react';
-import ComponentA from './UseContext/ComponentA';
-export const User = createContext();
-export const User1 = createContext();
+import React, { useState, createContext } from 'react';
+import { UserContext } from './UseContext/UserContext';
+import UserProfile from './UseContext/UserProfile';
 const App2 = () => {
   const name = 'John';
   const age = 20;
   return (
     <>
-      <User.Provider value={name}>
-        <ComponentA />
-      </User.Provider>
+      <UserContext.Provider>
+        <UserProfile />
+      </UserContext.Provider>
     </>
   );
 };

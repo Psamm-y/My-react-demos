@@ -1,7 +1,8 @@
-import { UserProvider, UserContext } from './UseContext';
-import React from 'react';
+import { UserProvider, UserContext } from './UserContext';
+import React, { useContext } from 'react';
 
 const UserProfile = () => {
+  useContext(UserContext);
   return <div>UserProfile</div>;
 };
 
