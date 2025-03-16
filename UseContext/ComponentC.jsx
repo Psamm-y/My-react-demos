@@ -1,5 +1,5 @@
 import React from 'react';
-import { User } from './ComponentA';
+import { User } from '../App2';
 const ComponentC = () => {
   return (
     <div>
