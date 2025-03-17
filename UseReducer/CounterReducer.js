@@ -9,7 +9,7 @@ const counterReducer = (state, action) => {
     case "reset":
       return { ...state, count: 0 }
     case "incrementByAmount":
-      return { ...state, count: state.count+action.payload }
+      return { ...state, count: state.count + action.payload }
     case "decrementByAmount":
       return {...state,count: state.count-action.payload}
     default:
