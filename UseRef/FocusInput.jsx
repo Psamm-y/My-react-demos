@@ -2,7 +2,16 @@ import React, { useRef } from 'react';
 
 const FocusInput = () => {
   const inputField = useRef(null);
-  return <div>FocusInput</div>;
+
+  const focusHandler = () => {
+    input.current.focus();
+  };
+  return (
+    <div>
+      <input type="text" ref={inputField} />
+      <button onClick={focusHandler}>Focus</button>
+    </div>
+  );
 };
 
 export default FocusInput;
