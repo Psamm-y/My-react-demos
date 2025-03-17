@@ -8,7 +8,7 @@ const FocusInput = () => {
   };
   return (
     <div>
-      <input type="text" ref={inputField} />
+      <input type="text" ref={inputField} placeholder="Click button to focus" />
       <button onClick={focusHandler}>Focus</button>
     </div>
   );
