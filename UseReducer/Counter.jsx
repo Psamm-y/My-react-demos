@@ -23,7 +23,7 @@ const Counter = () => {
         <button onClick={() => dispatch({ type: 'reset' })}>Reset</button>
         <button
           onClick={() => {
-            dispatch({ type: 'incrementByAmount', payload: Number(value) });
+            dispatch({ type: 'incrementByAmount', payload: Number(value) }); //converting value to number to use in payload
             setValue(0);
           }}
         >
