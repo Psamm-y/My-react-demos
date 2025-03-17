@@ -13,7 +13,6 @@ const reducer = (state, action) => {
       return { ...state, count: 0 };
     default:
       return state;
-      break;
   }
 };
 const App = () => {
