@@ -21,10 +21,7 @@ const Todo2 = () => {
       )
     );
   };
-  const removeTask = (index) => {
-    // setTodos((todo) => todo.filter((_, i) => i !== index));
-    setTodos((todo) => todo.map((_, i) => (i == index ? <s>{todo}</s> : todo)));
-  };
+
   const handleChange = (e) => {
     setInput(e.target.value);
   };
@@ -42,8 +39,19 @@ const Todo2 = () => {
       </form>
 
       {todos.map((todo, index) => (
-        <li style={{ listStyle: 'none' }} key={index}>
-          <input onClick={() => removeTask(index)} type="checkbox" /> {todo}
+        <li
+          style={{
+            listStyle: 'none',
+            textDecoration: todo.completed ? 'line-through' : 'none',
+          }}
+          key={index}
+        >
+          <input
+            onChange={() => toggleComplete(index)}
+            type="checkbox"
+            checked={todo.completed}
+          />
+          {todo.text}
         </li>
       ))}
     </section>
