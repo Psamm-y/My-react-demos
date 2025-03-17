@@ -4,7 +4,7 @@ const FocusInput = () => {
   const inputField = useRef(null);
 
   const focusHandler = () => {
-    input.current.focus();
+    inputField.current.focus();
   };
   return (
     <div>

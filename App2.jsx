@@ -2,8 +2,8 @@
 // import { UserContext, UserProvider } from './UseContext/UserContext';
 // import UserProfile from './UseContext/UserProfile';
 
-import Todo2 from './StateHooks/Todo2';
 import Counter from './UseReducer/Counter';
+import FocusInput from './UseRef/FocusInput';
 
 const App2 = () => {
   return (
@@ -11,8 +11,8 @@ const App2 = () => {
       {/* <UserProvider>
         <UserProfile />
       </UserProvider> */}
-      <Counter />
-      <Todo2 />
+
+      <FocusInput />
     </>
   );
 };
