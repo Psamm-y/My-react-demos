@@ -2,8 +2,7 @@
 // import { UserContext, UserProvider } from './UseContext/UserContext';
 // import UserProfile from './UseContext/UserProfile';
 
-import Counter from './UseReducer/Counter';
-import FocusInput from './UseRef/FocusInput';
+import Timer from './UseRef/Timer';
 
 const App2 = () => {
   return (
@@ -12,7 +11,7 @@ const App2 = () => {
         <UserProfile />
       </UserProvider> */}
 
-      <FocusInput />
+      <Timer />
     </>
   );
 };
