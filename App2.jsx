@@ -2,6 +2,7 @@
 // import { UserContext, UserProvider } from './UseContext/UserContext';
 // import UserProfile from './UseContext/UserProfile';
 
+import Todo2 from './StateHooks/Todo2';
 import Counter from './UseReducer/Counter';
 
 const App2 = () => {
@@ -11,6 +12,7 @@ const App2 = () => {
         <UserProfile />
       </UserProvider> */}
       <Counter />
+      <Todo2 />
     </>
   );
 };
