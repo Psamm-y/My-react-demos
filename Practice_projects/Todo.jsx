@@ -19,12 +19,14 @@ const Todo = () => {
   return (
     <div className="todo-block tod">
       <h2>
-        {' '}
         <FcTodoList style={{ color: 'yellow' }} />
         My Todo List App
       </h2>
-      <input type="text" onChange={handleInput} value={inputValue} />
-      <button onClick={handleAddTodo}>Add todo</button>
+      <form>
+        <input type="text" onChange={handleInput} value={inputValue} />
+        <button onClick={handleAddTodo}>Add todo</button>
+      </form>
+
       {tasks.map((todo, index) => (
         <li key={index}>{todo.text}</li>
       ))}

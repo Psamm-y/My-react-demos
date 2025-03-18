@@ -1,11 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap');
+
 .todo-block {
   width: 30em;
   height: 30em;
-  background-color: rgb(131, 185, 232);
+  background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
   box-shadow: 0.3em 0.3em 2px rgba(69, 99, 124, 0.486);
-  border: none;
+  border: 1px solid rgba(70, 69, 69, 0.468);
   border-radius: 2px;
+}
+.todo-block h2 {
+  display: flex;
+  align-items: center;
+  color: rgb(103, 163, 216);
+  font-family: 'Tektur', sans-serif;
 }
