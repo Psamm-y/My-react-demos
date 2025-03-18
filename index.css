@@ -1,3 +1,8 @@
 body {
   background-color: white;
 }
+.todo-block {
+  width: 40em;
+  height: 100%;
+  background-color: aliceblue;
+}
