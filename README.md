@@ -11,21 +11,20 @@ About the Demos
 Each demo is a self-contained project, with its own README file explaining the concept, implementation, and any notable features.
 
 ## 🧱Getting Started
-To run any of the demos, follow these steps:
-1. Fork the repository to have a copy.
-2. Clone the repository: (*replace ```your-username``` with your actual github username*)
+**To run any of the demos, follow these steps:**
+1. Clone the repository:
 ```bash
-git clone https://github.com/your-username/My-react-demos.git
+git clone https://github.com/psamm-y/My-react-demos.git
 ```
 2. Navigate to the demo directory:
 ```bash
 cd demo-name (replace with the desired demo)
 ```
-5. Install dependencies:
+3. Install dependencies:
 ```bash
 npm install or yarn install
 ```
-7. Start the demo:
+4. Start the demo:
 ```bash
    npm run dev
 ```
