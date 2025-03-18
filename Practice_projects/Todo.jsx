@@ -16,6 +16,14 @@ const Todo = () => {
 
     setInputValue('');
   };
+
+  const toggleCompleted = (index) => {
+    setTasks((prevTask) =>
+      prevTasks.map((todo, i) =>
+        i === index ? [...todo, { completed: !completed }] : todo
+      )
+    );
+  };
   return (
     <div className="todo-block tod">
       <h2>
@@ -23,12 +31,22 @@ const Todo = () => {
         My Todo List App
       </h2>
       <form>
-        <input type="text" onChange={handleInput} value={inputValue} />
-        <button onClick={handleAddTodo}>Add todo</button>
+        <input
+          type="text"
+          onChange={handleInput}
+          value={inputValue}
+          placeholder="Enter a task..."
+        />
+        &nbsp;<button onClick={handleAddTodo}>Add todo</button>
       </form>
 
       {tasks.map((todo, index) => (
-        <li key={index}>{todo.text}</li>
+        <section key={index}>
+          <li>
+            <input type="checkbox" />
+            {todo.index} {todo.text}
+          </li>
+        </section>
       ))}
     </div>
   );
