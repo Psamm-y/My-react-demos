@@ -2,6 +2,7 @@
 // import { UserContext, UserProvider } from './UseContext/UserContext';
 // import UserProfile from './UseContext/UserProfile';
 
+import Todo from './Practice_projects/Todo';
 import Timer from './UseRef/Timer';
 
 const App2 = () => {
@@ -11,7 +12,7 @@ const App2 = () => {
         <UserProfile />
       </UserProvider> */}
 
-      <Timer />
+      <Todo />
     </>
   );
 };
