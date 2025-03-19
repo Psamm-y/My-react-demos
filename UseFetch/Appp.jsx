@@ -1,7 +1,7 @@
 import React from 'react';
 //after using custom hooks (i.e. useFetch)
 import useFetch from './useFetch';
-const App2 = () => {
+const Appp = () => {
   const [data] = useFetch('https://jsonplaceholder.typicode.com/todos');
   //destructuring the data array returned by useFetch.jsx
   return (
@@ -21,4 +21,4 @@ const App2 = () => {
   );
 };
 
-export default App2;
+export default Appp;
