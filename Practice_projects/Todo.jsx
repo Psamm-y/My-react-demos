@@ -22,14 +22,14 @@ const Todo = () => {
   const toggleCompleted = (index) => {
     setTasks((prevTasks) =>
       prevTasks.map((todo, i) =>
-        i === index ? { ...todo, completed: !completed } : todo
+        i === index ? { ...todo, completed: !todo.completed } : todo
       )
     );
   };
   return (
     <div className="todo-block tod">
       <h2>
-        <FcTodoList style={{ color: 'yellow' }} />
+        <FcTodoList />
         My Todo List App
       </h2>
       <form>
@@ -44,10 +44,11 @@ const Todo = () => {
 
       {tasks.map((todo, index) => (
         <ul key={index}>
-          <li className={tasks.completed ? 'completed' : ''}>
+          <li className={todo.completed ? 'completed' : ''}>
             <input type="checkbox" onChange={() => toggleCompleted(index)} />
-            {todo.index} {todo.text}
+            {todo.text}
           </li>
+          <button>Remove</button>
         </ul>
       ))}
     </div>

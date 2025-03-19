@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap');
-
+button {
+  cursor: pointer;
+}
 .todo-block {
   background-position: center;
   width: 24em;
@@ -22,9 +24,15 @@
 li {
   margin-bottom: 1px;
   list-style-type: none;
+  width: 100%;
+  display: flex;
+  align-items: center;
 }
 .todo-block ul {
   width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .todo-block form input {
   outline: none;
@@ -58,5 +66,11 @@ input[type='checkbox']:checked {
   accent-color: rgb(103, 163, 216);
 }
 .completed {
-  text-decoration: line-through;
+  text-decoration: line-through gray;
+  color: gray;
+}
+ul button {
+  font-size: 0.5em;
+  color: red;
+  border: 1px solid rgb(103, 163, 216);
 }
