@@ -8,7 +8,7 @@ const App2 = () => {
       {/* <UserProvider>
         <UserProfile />
       </UserProvider> */}
-      <App2 />
+      <Appp />
     </>
   );
 };
