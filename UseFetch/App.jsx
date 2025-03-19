@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-
+//before using custom hooks (e.g.useFetch.jsx)
 const App = () => {
   const [data, setData] = useState(null);
 
