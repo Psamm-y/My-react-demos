@@ -23,7 +23,7 @@ li {
   margin-bottom: 1px;
   list-style-type: none;
 }
-.todo-block section {
+.todo-block ul {
   width: 100%;
 }
 .todo-block form input {
@@ -53,4 +53,10 @@ form button:hover {
   background-color: rgb(103, 163, 216);
   border: 1px solid;
   color: white;
+}
+input[type='checkbox']:checked {
+  accent-color: rgb(103, 163, 216);
+}
+.completed {
+  text-decoration: line-through;
 }

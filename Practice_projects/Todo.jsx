@@ -12,15 +12,17 @@ const Todo = () => {
   const handleAddTodo = (e) => {
     e.preventDefault();
 
-    inputValue.trim() ? setTasks([...tasks, { text: inputValue }]) : tasks.text;
+    inputValue.trim()
+      ? setTasks([...tasks, { text: inputValue, completed: false }])
+      : tasks.text;
 
     setInputValue('');
   };
 
   const toggleCompleted = (index) => {
-    setTasks((prevTask) =>
+    setTasks((prevTasks) =>
       prevTasks.map((todo, i) =>
-        i === index ? [...todo, { completed: !completed }] : todo
+        i === index ? { ...todo, completed: !completed } : todo
       )
     );
   };
@@ -41,12 +43,12 @@ const Todo = () => {
       </form>
 
       {tasks.map((todo, index) => (
-        <section key={index}>
-          <li>
-            <input type="checkbox" />
+        <ul key={index}>
+          <li className={tasks.completed ? 'completed' : ''}>
+            <input type="checkbox" onChange={() => toggleCompleted(index)} />
             {todo.index} {todo.text}
           </li>
-        </section>
+        </ul>
       ))}
     </div>
   );
