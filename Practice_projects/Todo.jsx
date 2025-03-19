@@ -26,29 +26,36 @@ const Todo = () => {
       )
     );
   };
+
+  const handleRemove = (index) => {
+    setTasks((prevTasks) => prevTasks.filter((_, i) => i !== index));
+  };
   return (
     <div className="todo-block tod">
-      <h2>
-        <FcTodoList />
-        My Todo List App
-      </h2>
-      <form>
-        <input
-          type="text"
-          onChange={handleInput}
-          value={inputValue}
-          placeholder="Enter a task..."
-        />
-        &nbsp;<button onClick={handleAddTodo}>Add todo</button>
-      </form>
+      <div className="fixed">
+        <h2>
+          <FcTodoList />
+          My Todo List App
+        </h2>
+        <form>
+          <input
+            type="text"
+            onChange={handleInput}
+            value={inputValue}
+            placeholder="Enter a task..."
+          />
+          &nbsp;<button onClick={handleAddTodo}>Add todo</button>
+        </form>
+      </div>
 
       {tasks.map((todo, index) => (
         <ul key={index}>
           <li className={todo.completed ? 'completed' : ''}>
-            <input type="checkbox" onChange={() => toggleCompleted(index)} />
+            <input type="checkbox" onChange={() => toggleCompleted(index)} />{' '}
+            &nbsp;
             {todo.text}
           </li>
-          <button>Remove</button>
+          <button onClick={() => handleRemove(index)}>Remove</button>
         </ul>
       ))}
     </div>
