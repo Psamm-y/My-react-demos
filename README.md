@@ -4,7 +4,7 @@
 This repository documents my learning journey with React. It contains a collection of directories,demo projects,exercises etc. each showcasing a specific concept, feature, or technique.
 
 ## 📜Demo projects include: 
-- Todo-list-app => [Todo](./StateHooks/Todo.jsx)
+- Todo-list-app => [Todo App](Practice_projects/Todo.jsx)
 - Counter => 
 
 About the Demos
