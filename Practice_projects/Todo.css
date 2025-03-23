@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap');
+
 button {
   cursor: pointer;
   white-space: nowrap;
@@ -11,7 +12,7 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 0.3em 0.3em 0em rgba(69, 99, 124, 0.71);
+  box-shadow: 0.3em 0.3em 0em rgba(69, 99, 124, 0.201);
   border: 1px solid rgba(70, 69, 69, 0.468);
   border-radius: 2px;
   padding: 4em 2em 2em 2em;
@@ -62,6 +63,7 @@ form button {
   border-top-right-radius: 0.4em;
   border-bottom-right-radius: 0.4em;
   transition: all 0.1s ease-in;
+  padding: 0 0.3em;
 }
 form button:hover {
   background-color: rgb(103, 163, 216);
@@ -75,8 +77,8 @@ input[type='checkbox']:checked {
   text-decoration: line-through gray;
   color: gray;
 }
-ul button {
-  font-size: 0.5em;
-  color: red;
-  border: 1px solid rgb(103, 163, 216);
+ul span {
+  color: rgb(237, 26, 26);
+  font-size: 0.8em;
+  cursor: pointer;
 }

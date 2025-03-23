@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './Todo.css';
 import { FcTodoList } from 'react-icons/fc';
+import { ImBin } from 'react-icons/im';
 const Todo = () => {
   const [tasks, setTasks] = useState([]);
   const [inputValue, setInputValue] = useState('');
@@ -55,7 +56,9 @@ const Todo = () => {
             &nbsp;
             {todo.text}
           </li>
-          <button onClick={() => handleRemove(index)}>Remove</button>
+          <span onClick={() => handleRemove(index)}>
+            <ImBin />
+          </span>
         </ul>
       ))}
     </div>
