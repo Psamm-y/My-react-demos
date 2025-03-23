@@ -5,7 +5,8 @@ This repository documents my learning journey with React. It contains a collecti
 
 ## 📜Demo projects include: 
 - Todo-list-app => [Todo App](Practice_projects/Todo.jsx)
-- Counter => 
+![image](https://github.com/user-attachments/assets/0725ba1a-b7a6-46fd-adf4-6554870af2bb)
+
 
 About the Demos
 Each demo is a self-contained project, with its own README file explaining the concept, implementation, and any notable features.
